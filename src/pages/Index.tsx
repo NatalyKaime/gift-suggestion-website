@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import ExternalLinks from "@/components/ExternalLinks";
+import NativeAd from "@/components/NativeAd";
 import Icon from "@/components/ui/icon";
 
 const Index = () => {
@@ -26,6 +27,8 @@ const Index = () => {
             </div>
           </div>
         </div>
+
+        <NativeAd />
 
         <div className="flex justify-center gap-4 mb-8">
           <Link to="/choose-gift">
