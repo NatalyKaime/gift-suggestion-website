@@ -14,6 +14,25 @@ import Icon from "@/components/ui/icon";
 const ChooseGift = () => {
   const [selectedCategory, setSelectedCategory] = useState<string>("");
 
+  const languageClubs = [
+    {
+      id: "harry-potter",
+      title: "Английский клуб с Гарри Поттером",
+      icon: "BookOpen",
+      description: "Изучай английский через магический мир Хогвартса",
+      link: "https://t.me/english_harry_potter_club",
+      gradient: "from-blue-500 to-purple-600",
+    },
+    {
+      id: "little-prince",
+      title: "Французский клуб с Маленьким принцем",
+      icon: "Star",
+      description: "Открой красоту французского языка с любимой сказкой",
+      link: "https://t.me/french_little_prince_club",
+      gradient: "from-pink-500 to-rose-600",
+    },
+  ];
+
   const giftCategories = {
     gender: [
       {
@@ -84,46 +103,55 @@ const ChooseGift = () => {
           </Link>
         </div>
 
-        <Tabs defaultValue="gender" className="w-full">
-          <TabsList className="grid w-full grid-cols-3 mb-8">
-            <TabsTrigger value="gender">По полу</TabsTrigger>
+        <div className="mb-8">
+          <h2 className="text-2xl font-semibold text-center mb-6 text-gray-800">
+            🌟 Языковые клубы
+          </h2>
+          <div className="grid md:grid-cols-2 gap-6 mb-8">
+            {languageClubs.map((club) => (
+              <a
+                key={club.id}
+                href={club.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block"
+              >
+                <Card
+                  className={`hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 bg-gradient-to-r ${club.gradient} text-white border-0`}
+                >
+                  <CardHeader className="text-center pb-4">
+                    <Icon
+                      name={club.icon as any}
+                      size={48}
+                      className="mx-auto mb-4 text-white"
+                    />
+                    <CardTitle className="text-xl font-bold">
+                      {club.title}
+                    </CardTitle>
+                    <CardDescription className="text-white/90 text-base">
+                      {club.description}
+                    </CardDescription>
+                  </CardHeader>
+                  <CardContent className="text-center">
+                    <Button
+                      variant="secondary"
+                      className="bg-white/20 text-white border-white/30 hover:bg-white/30"
+                    >
+                      Присоединиться
+                      <Icon name="ExternalLink" size={16} className="ml-2" />
+                    </Button>
+                  </CardContent>
+                </Card>
+              </a>
+            ))}
+          </div>
+        </div>
+
+        <Tabs defaultValue="age" className="w-full">
+          <TabsList className="grid w-full grid-cols-2 mb-8">
             <TabsTrigger value="age">По возрасту</TabsTrigger>
             <TabsTrigger value="interests">По интересам</TabsTrigger>
           </TabsList>
-
-          <TabsContent value="gender">
-            <div className="grid md:grid-cols-2 gap-6">
-              {giftCategories.gender.map((category) => (
-                <Card
-                  key={category.id}
-                  className="hover:shadow-lg transition-shadow cursor-pointer"
-                  onClick={() => setSelectedCategory(category.id)}
-                >
-                  <CardHeader className="text-center">
-                    <Icon
-                      name={category.icon as any}
-                      size={48}
-                      className="mx-auto mb-4 text-purple-600"
-                    />
-                    <CardTitle className="text-2xl">{category.title}</CardTitle>
-                    <CardDescription>Популярные подарки</CardDescription>
-                  </CardHeader>
-                  <CardContent>
-                    <div className="grid grid-cols-2 gap-2">
-                      {category.gifts.map((gift, index) => (
-                        <div
-                          key={index}
-                          className="bg-purple-100 rounded-lg p-3 text-center text-sm"
-                        >
-                          {gift}
-                        </div>
-                      ))}
-                    </div>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-          </TabsContent>
 
           <TabsContent value="age">
             <div className="grid md:grid-cols-3 gap-6">
