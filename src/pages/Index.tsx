@@ -11,9 +11,20 @@ const Index = () => {
           <h1 className="text-5xl font-bold text-gray-900 mb-6">
             Не знаешь , что подарить? Подари время*
           </h1>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Здесь вы найдете полезные ссылки на наши ресурсы и каналы связи
-          </p>
+          <div className="text-xl text-gray-600 max-w-2xl mx-auto">
+            <div className="animate-fade-in opacity-0 [animation-delay:0.2s] [animation-fill-mode:forwards]">
+              *Время наедине с собой
+            </div>
+            <div className="animate-fade-in opacity-0 [animation-delay:0.6s] [animation-fill-mode:forwards]">
+              Время общения с единомышленниками
+            </div>
+            <div className="animate-fade-in opacity-0 [animation-delay:1.0s] [animation-fill-mode:forwards]">
+              Время саморазвития и образования
+            </div>
+            <div className="animate-fade-in opacity-0 [animation-delay:1.4s] [animation-fill-mode:forwards]">
+              Время ухода за здоровьем
+            </div>
+          </div>
         </div>
 
         <div className="flex justify-center gap-4 mb-8">
