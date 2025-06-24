@@ -12,16 +12,16 @@ const Index = () => {
             Не знаешь , что подарить? Подари время*
           </h1>
           <div className="text-xl text-gray-600 max-w-2xl mx-auto">
-            <div className="animate-fade-in opacity-0 [animation-delay:0.2s] [animation-fill-mode:forwards]">
+            <div className="animate-fade-in opacity-0 [animation-delay:0.2s] [animation-fill-mode:forwards] text-black">
               *Время наедине с собой
             </div>
-            <div className="animate-fade-in opacity-0 [animation-delay:0.6s] [animation-fill-mode:forwards]">
+            <div className="animate-fade-in opacity-0 [animation-delay:0.6s] [animation-fill-mode:forwards] text-black">
               Время общения с единомышленниками
             </div>
-            <div className="animate-fade-in opacity-0 [animation-delay:1.0s] [animation-fill-mode:forwards] bg-[#000000]">
+            <div className="animate-fade-in opacity-0 [animation-delay:1.0s] [animation-fill-mode:forwards] text-black">
               Время саморазвития и образования
             </div>
-            <div className="animate-fade-in opacity-0 [animation-delay:1.4s] [animation-fill-mode:forwards]">
+            <div className="animate-fade-in opacity-0 [animation-delay:1.4s] [animation-fill-mode:forwards] text-black">
               Время ухода за здоровьем
             </div>
           </div>
