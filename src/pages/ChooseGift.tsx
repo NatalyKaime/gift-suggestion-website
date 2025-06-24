@@ -28,7 +28,7 @@ const ChooseGift = () => {
       title: "Французский клуб с Маленьким принцем",
       icon: "Star",
       description: "Открой красоту французского языка с любимой сказкой",
-      link: "https://t.me/french_little_prince_club",
+      link: "/french-club",
       gradient: "from-pink-500 to-rose-600",
     },
   ];
@@ -108,42 +108,73 @@ const ChooseGift = () => {
             🌟 Языковые клубы
           </h2>
           <div className="grid md:grid-cols-2 gap-6 mb-8">
-            {languageClubs.map((club) => (
-              <a
-                key={club.id}
-                href={club.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="block"
-              >
-                <Card
-                  className={`hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 bg-gradient-to-r ${club.gradient} text-white border-0`}
+            {languageClubs.map((club) =>
+              club.id === "little-prince" ? (
+                <Link key={club.id} to={club.link} className="block">
+                  <Card
+                    className={`hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 bg-gradient-to-r ${club.gradient} text-white border-0`}
+                  >
+                    <CardHeader className="text-center pb-4">
+                      <Icon
+                        name={club.icon as any}
+                        size={48}
+                        className="mx-auto mb-4 text-white"
+                      />
+                      <CardTitle className="text-xl font-bold">
+                        {club.title}
+                      </CardTitle>
+                      <CardDescription className="text-white/90 text-base">
+                        {club.description}
+                      </CardDescription>
+                    </CardHeader>
+                    <CardContent className="text-center">
+                      <Button
+                        variant="secondary"
+                        className="bg-white/20 text-white border-white/30 hover:bg-white/30"
+                      >
+                        Присоединиться
+                        <Icon name="ArrowRight" size={16} className="ml-2" />
+                      </Button>
+                    </CardContent>
+                  </Card>
+                </Link>
+              ) : (
+                <a
+                  key={club.id}
+                  href={club.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block"
                 >
-                  <CardHeader className="text-center pb-4">
-                    <Icon
-                      name={club.icon as any}
-                      size={48}
-                      className="mx-auto mb-4 text-white"
-                    />
-                    <CardTitle className="text-xl font-bold">
-                      {club.title}
-                    </CardTitle>
-                    <CardDescription className="text-white/90 text-base">
-                      {club.description}
-                    </CardDescription>
-                  </CardHeader>
-                  <CardContent className="text-center">
-                    <Button
-                      variant="secondary"
-                      className="bg-white/20 text-white border-white/30 hover:bg-white/30"
-                    >
-                      Присоединиться
-                      <Icon name="ExternalLink" size={16} className="ml-2" />
-                    </Button>
-                  </CardContent>
-                </Card>
-              </a>
-            ))}
+                  <Card
+                    className={`hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 bg-gradient-to-r ${club.gradient} text-white border-0`}
+                  >
+                    <CardHeader className="text-center pb-4">
+                      <Icon
+                        name={club.icon as any}
+                        size={48}
+                        className="mx-auto mb-4 text-white"
+                      />
+                      <CardTitle className="text-xl font-bold">
+                        {club.title}
+                      </CardTitle>
+                      <CardDescription className="text-white/90 text-base">
+                        {club.description}
+                      </CardDescription>
+                    </CardHeader>
+                    <CardContent className="text-center">
+                      <Button
+                        variant="secondary"
+                        className="bg-white/20 text-white border-white/30 hover:bg-white/30"
+                      >
+                        Присоединиться
+                        <Icon name="ExternalLink" size={16} className="ml-2" />
+                      </Button>
+                    </CardContent>
+                  </Card>
+                </a>
+              ),
+            )}
           </div>
         </div>
 
