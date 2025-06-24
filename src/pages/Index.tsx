@@ -18,7 +18,7 @@ const Index = () => {
             <div className="animate-fade-in opacity-0 [animation-delay:0.6s] [animation-fill-mode:forwards]">
               Время общения с единомышленниками
             </div>
-            <div className="animate-fade-in opacity-0 [animation-delay:1.0s] [animation-fill-mode:forwards]">
+            <div className="animate-fade-in opacity-0 [animation-delay:1.0s] [animation-fill-mode:forwards] bg-[#000000]">
               Время саморазвития и образования
             </div>
             <div className="animate-fade-in opacity-0 [animation-delay:1.4s] [animation-fill-mode:forwards]">
