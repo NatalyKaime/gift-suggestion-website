@@ -10,7 +10,7 @@ const Index = () => {
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100">
       <div className="container mx-auto px-4 py-12">
         <div className="text-center mb-12">
-          <h1 className="text-5xl font-bold text-gray-900 mb-6">
+          <h1 className="text-5xl font-bold text-gray-900 mb-6 whitespace-nowrap">
             Что подарить?
           </h1>
           <p className="text-lg text-gray-500 mb-8 font-medium">
