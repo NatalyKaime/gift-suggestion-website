@@ -16,12 +16,6 @@ const Index = () => {
           <p className="text-lg text-gray-500 mb-8 font-medium">
             агрегатор идей для подарков со ссылками на товары
           </p>
-          <div className="text-xl text-gray-600 max-w-2xl mx-auto">
-            <div className="text-black">Подарки для души и тела</div>
-            <div className="text-black">Общение с единомышленниками</div>
-            <div className="text-black">Саморазвитие и образование</div>
-            <div className="text-black">Уход за здоровьем</div>
-          </div>
 
           <div className="flex justify-center gap-4 mt-8">
             <Link to="/choose-gift">
