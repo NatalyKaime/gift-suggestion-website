@@ -11,20 +11,20 @@ const Index = () => {
       <div className="container mx-auto px-4 py-12">
         <div className="text-center mb-12">
           <h1 className="text-5xl font-bold text-gray-900 mb-6">
-            Не знаешь , что подарить? Подари время*
+            Не знаешь, что подарить?
           </h1>
           <div className="text-xl text-gray-600 max-w-2xl mx-auto">
             <div className="animate-fade-in opacity-0 [animation-delay:0.2s] [animation-fill-mode:forwards] text-black">
-              *Время наедине с собой
+              Подарки для души и тела
             </div>
             <div className="animate-fade-in opacity-0 [animation-delay:0.6s] [animation-fill-mode:forwards] text-black">
-              Время общения с единомышленниками
+              Общение с единомышленниками
             </div>
             <div className="animate-fade-in opacity-0 [animation-delay:1.0s] [animation-fill-mode:forwards] text-black">
-              Время саморазвития и образования
+              Саморазвитие и образование
             </div>
             <div className="animate-fade-in opacity-0 [animation-delay:1.4s] [animation-fill-mode:forwards] text-black">
-              Время ухода за здоровьем
+              Уход за здоровьем
             </div>
           </div>
         </div>
