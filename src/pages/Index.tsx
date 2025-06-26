@@ -11,7 +11,7 @@ const Index = () => {
       <div className="container mx-auto px-4 py-12">
         <div className="text-center mb-12">
           <h1 className="text-5xl font-bold text-gray-900 mb-6">
-            Не знаешь, что подарить?
+            Что подарить?
           </h1>
           <div className="text-xl text-gray-600 max-w-2xl mx-auto">
             <div className="animate-fade-in opacity-0 [animation-delay:0.2s] [animation-fill-mode:forwards] text-black">
