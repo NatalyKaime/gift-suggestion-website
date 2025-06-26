@@ -13,6 +13,9 @@ const Index = () => {
           <h1 className="text-5xl font-bold text-gray-900 mb-6">
             Что подарить?
           </h1>
+          <p className="text-lg text-gray-500 mb-8 font-medium">
+            агрегатор идей для подарков со ссылками на товары
+          </p>
           <div className="text-xl text-gray-600 max-w-2xl mx-auto">
             <div className="animate-fade-in opacity-0 [animation-delay:0.2s] [animation-fill-mode:forwards] text-black">
               Подарки для души и тела
