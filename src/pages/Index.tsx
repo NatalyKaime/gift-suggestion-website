@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import ExternalLinks from "@/components/ExternalLinks";
-import NativeAd from "@/components/NativeAd";
+
 import HandmadeDishware from "@/components/HandmadeDishware";
 import Icon from "@/components/ui/icon";
 
@@ -26,8 +26,6 @@ const Index = () => {
             </Link>
           </div>
         </div>
-
-        <NativeAd />
 
         <HandmadeDishware />
 
