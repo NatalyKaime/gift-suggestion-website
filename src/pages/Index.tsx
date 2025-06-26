@@ -17,18 +17,10 @@ const Index = () => {
             агрегатор идей для подарков со ссылками на товары
           </p>
           <div className="text-xl text-gray-600 max-w-2xl mx-auto">
-            <div className="animate-fade-in opacity-0 [animation-delay:0.2s] [animation-fill-mode:forwards] text-black">
-              Подарки для души и тела
-            </div>
-            <div className="animate-fade-in opacity-0 [animation-delay:0.6s] [animation-fill-mode:forwards] text-black">
-              Общение с единомышленниками
-            </div>
-            <div className="animate-fade-in opacity-0 [animation-delay:1.0s] [animation-fill-mode:forwards] text-black">
-              Саморазвитие и образование
-            </div>
-            <div className="animate-fade-in opacity-0 [animation-delay:1.4s] [animation-fill-mode:forwards] text-black">
-              Уход за здоровьем
-            </div>
+            <div className="text-black">Подарки для души и тела</div>
+            <div className="text-black">Общение с единомышленниками</div>
+            <div className="text-black">Саморазвитие и образование</div>
+            <div className="text-black">Уход за здоровьем</div>
           </div>
 
           <div className="flex justify-center gap-4 mt-8">
