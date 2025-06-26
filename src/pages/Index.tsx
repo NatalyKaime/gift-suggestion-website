@@ -27,20 +27,20 @@ const Index = () => {
               Уход за здоровьем
             </div>
           </div>
+
+          <div className="flex justify-center gap-4 mt-8">
+            <Link to="/choose-gift">
+              <Button className="flex items-center gap-2 text-lg px-6 py-3">
+                <Icon name="Gift" size={20} />
+                Выбрать подарок
+              </Button>
+            </Link>
+          </div>
         </div>
 
         <NativeAd />
 
         <HandmadeDishware />
-
-        <div className="flex justify-center gap-4 mb-8">
-          <Link to="/choose-gift">
-            <Button className="flex items-center gap-2 text-lg px-6 py-3">
-              <Icon name="Gift" size={20} />
-              Выбрать подарок
-            </Button>
-          </Link>
-        </div>
 
         <ExternalLinks />
       </div>
