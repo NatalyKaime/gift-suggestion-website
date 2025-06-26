@@ -13,7 +13,7 @@ const Index = () => {
           <h1 className="text-5xl font-bold text-gray-900 mb-3 whitespace-nowrap">
             Что подарить?
           </h1>
-          <p className="text-base text-gray-500 mb-5 font-medium whitespace-nowrap">
+          <p className="text-sm text-gray-500 mb-5 font-medium whitespace-nowrap">
             агрегатор идей для подарков со ссылками на товары
           </p>
 
