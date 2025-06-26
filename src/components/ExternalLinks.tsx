@@ -21,8 +21,8 @@ const ExternalLinks = () => {
     {
       title: "Telegram канал",
       description:
-        "Подписывайтесь на наш канал для получения новостей и обновлений",
-      url: "https://t.me/+QgiLIa1gFRY4Y2Iy",
+        "по вопросам рекламы своих товаров на наших площадках обращайтесь к администратору",
+      url: "https://t.me/interesnble",
       icon: "MessageCircle",
       color: "bg-blue-500",
     },
