@@ -114,26 +114,27 @@ const ChooseGift = () => {
           </CardHeader>
           <CardContent>
             <div className="grid md:grid-cols-2 gap-6">
-              {languageClubs.map((club) =>
-                club.id === "little-prince" ? (
-                  <Link key={club.id} to={club.link} className="block">
-                    <Card
-                      className={`hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 bg-gradient-to-r ${club.gradient} text-white border-0 h-full`}
-                    >
-                      <CardHeader className="text-center pb-4">
-                        <Icon
-                          name={club.icon as any}
-                          size={40}
-                          className="mx-auto mb-3 text-white"
-                        />
-                        <CardTitle className="text-lg font-bold">
-                          {club.title}
-                        </CardTitle>
-                        <CardDescription className="text-white/90 text-sm">
-                          {club.description}
-                        </CardDescription>
-                      </CardHeader>
-                      <CardContent className="text-center">
+              {languageClubs.map((club) => (
+                <Card
+                  key={club.id}
+                  className={`hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 bg-gradient-to-r ${club.gradient} text-white border-0 h-full`}
+                >
+                  <CardHeader className="text-center pb-4">
+                    <Icon
+                      name={club.icon as any}
+                      size={40}
+                      className="mx-auto mb-3 text-white"
+                    />
+                    <CardTitle className="text-lg font-bold">
+                      {club.title}
+                    </CardTitle>
+                    <CardDescription className="text-white/90 text-sm">
+                      {club.description}
+                    </CardDescription>
+                  </CardHeader>
+                  <CardContent className="text-center">
+                    {club.id === "little-prince" ? (
+                      <Link to={club.link}>
                         <Button
                           variant="secondary"
                           className="bg-white/20 text-white border-white/30 hover:bg-white/30"
@@ -142,34 +143,13 @@ const ChooseGift = () => {
                           Присоединиться
                           <Icon name="ArrowRight" size={14} className="ml-2" />
                         </Button>
-                      </CardContent>
-                    </Card>
-                  </Link>
-                ) : (
-                  <a
-                    key={club.id}
-                    href={club.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="block"
-                  >
-                    <Card
-                      className={`hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 bg-gradient-to-r ${club.gradient} text-white border-0 h-full`}
-                    >
-                      <CardHeader className="text-center pb-4">
-                        <Icon
-                          name={club.icon as any}
-                          size={40}
-                          className="mx-auto mb-3 text-white"
-                        />
-                        <CardTitle className="text-lg font-bold">
-                          {club.title}
-                        </CardTitle>
-                        <CardDescription className="text-white/90 text-sm">
-                          {club.description}
-                        </CardDescription>
-                      </CardHeader>
-                      <CardContent className="text-center">
+                      </Link>
+                    ) : (
+                      <a
+                        href={club.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
                         <Button
                           variant="secondary"
                           className="bg-white/20 text-white border-white/30 hover:bg-white/30"
@@ -182,11 +162,11 @@ const ChooseGift = () => {
                             className="ml-2"
                           />
                         </Button>
-                      </CardContent>
-                    </Card>
-                  </a>
-                ),
-              )}
+                      </a>
+                    )}
+                  </CardContent>
+                </Card>
+              ))}
             </div>
           </CardContent>
         </Card>
