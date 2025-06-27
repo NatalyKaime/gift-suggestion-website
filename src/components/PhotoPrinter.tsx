@@ -1,41 +1,48 @@
-import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import Icon from "@/components/ui/icon";
 
 const PhotoPrinter = () => {
   return (
-    <div className="bg-white rounded-2xl shadow-lg p-6 mb-8">
-      <div className="flex flex-col md:flex-row items-center gap-6">
-        <div className="flex-1">
-          <div className="flex items-center gap-3 mb-4">
-            <Badge
-              variant="destructive"
-              className="bg-orange-500 hover:bg-orange-600"
-            >
-              Лучшее на озон
-            </Badge>
+    <div className="max-w-lg mx-auto mb-8">
+      <div className="bg-white rounded-xl shadow-lg border border-gray-200 overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-[1.02]">
+        <div className="relative">
+          <img
+            src="https://cdn.poehali.dev/files/cef45a80-b4d4-4a5c-934e-c04159e39e74.jpg"
+            alt="Портативный фотопринтер"
+            className="w-full h-64 object-cover"
+          />
+          <div className="absolute top-3 left-3 bg-orange-100 text-orange-700 text-xs px-3 py-1 rounded-full font-medium">
+            Лучшее на озон
           </div>
-          <h3 className="text-2xl font-bold text-gray-900 mb-4">
-            Портативный фотопринтер
-          </h3>
+        </div>
+
+        <div className="p-6">
+          <div className="flex items-center gap-3 mb-4">
+            <div className="w-12 h-12 bg-gradient-to-br from-blue-400 to-indigo-500 rounded-full flex items-center justify-center">
+              <Icon name="Camera" size={24} className="text-white" />
+            </div>
+            <div>
+              <h3 className="text-xl font-bold text-gray-900">
+                Портативный фотопринтер
+              </h3>
+              <p className="text-sm text-gray-600">Мгновенная печать фото</p>
+            </div>
+          </div>
+
+          <p className="text-gray-700 mb-6 leading-relaxed">
+            Компактный принтер для печати фотографий прямо с телефона.
+            Создавайте физические воспоминания в любом месте и в любое время.
+          </p>
+
           <a
             href="https://ozon.ru/t/8UNBsRQ"
             target="_blank"
             rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-500 to-indigo-500 text-white px-6 py-3 rounded-lg hover:from-blue-600 hover:to-indigo-600 transition-all duration-200 hover:scale-105 font-medium"
           >
-            <Button className="flex items-center gap-2">
-              <Icon name="ExternalLink" size={18} />
-              Смотреть на Озон
-            </Button>
+            Смотреть на Озон
+            <Icon name="ExternalLink" size={16} />
           </a>
-        </div>
-
-        <div className="flex-1 max-w-md">
-          <img
-            src="https://cdn.poehali.dev/files/cef45a80-b4d4-4a5c-934e-c04159e39e74.jpg"
-            alt="Портативный фотопринтер"
-            className="w-full h-auto rounded-xl shadow-md"
-          />
         </div>
       </div>
     </div>
