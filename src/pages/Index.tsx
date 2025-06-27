@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import ExternalLinks from "@/components/ExternalLinks";
 
 import HandmadeDishware from "@/components/HandmadeDishware";
+import PaintingCollection from "@/components/PaintingCollection";
 import Icon from "@/components/ui/icon";
 
 const Index = () => {
@@ -28,6 +29,8 @@ const Index = () => {
         </div>
 
         <HandmadeDishware />
+
+        <PaintingCollection />
 
         <ExternalLinks />
       </div>
