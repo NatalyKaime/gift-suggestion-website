@@ -17,17 +17,9 @@ const PhotoPrinter = () => {
         </div>
 
         <div className="p-6">
-          <div className="flex items-center gap-3 mb-4">
-            <div className="w-12 h-12 bg-gradient-to-br from-blue-400 to-indigo-500 rounded-full flex items-center justify-center">
-              <Icon name="Camera" size={24} className="text-white" />
-            </div>
-            <div>
-              <h3 className="text-xl font-bold text-gray-900">
-                Портативный фотопринтер
-              </h3>
-              <p className="text-sm text-gray-600">Мгновенная печать фото</p>
-            </div>
-          </div>
+          <h3 className="text-xl font-bold text-gray-900 mb-4">
+            Портативный фотопринтер
+          </h3>
 
           <p className="text-gray-700 mb-6 leading-relaxed">
             Компактный принтер для печати фотографий прямо с телефона.
