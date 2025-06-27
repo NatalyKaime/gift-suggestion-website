@@ -11,7 +11,7 @@ const OzonBest = () => {
             className="w-full h-64 object-cover"
           />
           <div className="absolute top-3 left-3 bg-red-100 text-red-700 text-xs px-3 py-1 rounded-full font-medium">
-            Яркий принт
+            Лучшее на озоне
           </div>
         </div>
 
