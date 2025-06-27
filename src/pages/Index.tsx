@@ -4,6 +4,7 @@ import ExternalLinks from "@/components/ExternalLinks";
 
 import HandmadeDishware from "@/components/HandmadeDishware";
 import PaintingCollection from "@/components/PaintingCollection";
+import OzonBest from "@/components/OzonBest";
 import Icon from "@/components/ui/icon";
 
 const Index = () => {
@@ -31,6 +32,8 @@ const Index = () => {
         <HandmadeDishware />
 
         <PaintingCollection />
+
+        <OzonBest />
 
         <ExternalLinks />
       </div>
