@@ -13,6 +13,7 @@ import Icon from "@/components/ui/icon";
 
 const ChooseGift = () => {
   const [selectedCategory, setSelectedCategory] = useState<string>("");
+  const [showLanguageClubs, setShowLanguageClubs] = useState<boolean>(false);
 
   const languageClubs = [
     {
@@ -113,61 +114,90 @@ const ChooseGift = () => {
             </CardDescription>
           </CardHeader>
           <CardContent>
-            <div className="grid md:grid-cols-2 gap-6">
-              {languageClubs.map((club) => (
-                <Card
-                  key={club.id}
-                  className={`hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 bg-gradient-to-r ${club.gradient} text-white border-0 h-full`}
+            {!showLanguageClubs ? (
+              <div className="text-center">
+                <Button
+                  onClick={() => setShowLanguageClubs(true)}
+                  className="bg-indigo-600 hover:bg-indigo-700 text-white px-8 py-3 text-lg"
+                  size="lg"
                 >
-                  <CardHeader className="text-center pb-4">
-                    <Icon
-                      name={club.icon as any}
-                      size={40}
-                      className="mx-auto mb-3 text-white"
-                    />
-                    <CardTitle className="text-lg font-bold">
-                      {club.title}
-                    </CardTitle>
-                    <CardDescription className="text-white/90 text-sm">
-                      {club.description}
-                    </CardDescription>
-                  </CardHeader>
-                  <CardContent className="text-center">
-                    {club.id === "little-prince" ? (
-                      <Link to={club.link}>
-                        <Button
-                          variant="secondary"
-                          className="bg-white/20 text-white border-white/30 hover:bg-white/30"
-                          size="sm"
-                        >
-                          Присоединиться
-                          <Icon name="ArrowRight" size={14} className="ml-2" />
-                        </Button>
-                      </Link>
-                    ) : (
-                      <a
-                        href={club.link}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <Button
-                          variant="secondary"
-                          className="bg-white/20 text-white border-white/30 hover:bg-white/30"
-                          size="sm"
-                        >
-                          Присоединиться
-                          <Icon
-                            name="ExternalLink"
-                            size={14}
-                            className="ml-2"
-                          />
-                        </Button>
-                      </a>
-                    )}
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
+                  Посмотреть языковые клубы
+                  <Icon name="ChevronRight" size={20} className="ml-2" />
+                </Button>
+              </div>
+            ) : (
+              <div>
+                <div className="flex justify-between items-center mb-6">
+                  <Button
+                    onClick={() => setShowLanguageClubs(false)}
+                    variant="outline"
+                    size="sm"
+                  >
+                    <Icon name="ArrowLeft" size={16} className="mr-2" />
+                    Назад
+                  </Button>
+                </div>
+                <div className="grid md:grid-cols-2 gap-6">
+                  {languageClubs.map((club) => (
+                    <Card
+                      key={club.id}
+                      className={`hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 bg-gradient-to-r ${club.gradient} text-white border-0 h-full`}
+                    >
+                      <CardHeader className="text-center pb-4">
+                        <Icon
+                          name={club.icon as any}
+                          size={40}
+                          className="mx-auto mb-3 text-white"
+                        />
+                        <CardTitle className="text-lg font-bold">
+                          {club.title}
+                        </CardTitle>
+                        <CardDescription className="text-white/90 text-sm">
+                          {club.description}
+                        </CardDescription>
+                      </CardHeader>
+                      <CardContent className="text-center">
+                        {club.id === "little-prince" ? (
+                          <Link to={club.link}>
+                            <Button
+                              variant="secondary"
+                              className="bg-white/20 text-white border-white/30 hover:bg-white/30"
+                              size="sm"
+                            >
+                              Присоединиться
+                              <Icon
+                                name="ArrowRight"
+                                size={14}
+                                className="ml-2"
+                              />
+                            </Button>
+                          </Link>
+                        ) : (
+                          <a
+                            href={club.link}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            <Button
+                              variant="secondary"
+                              className="bg-white/20 text-white border-white/30 hover:bg-white/30"
+                              size="sm"
+                            >
+                              Присоединиться
+                              <Icon
+                                name="ExternalLink"
+                                size={14}
+                                className="ml-2"
+                              />
+                            </Button>
+                          </a>
+                        )}
+                      </CardContent>
+                    </Card>
+                  ))}
+                </div>
+              </div>
+            )}
           </CardContent>
         </Card>
 
