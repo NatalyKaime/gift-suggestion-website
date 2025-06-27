@@ -10,9 +10,9 @@ import Icon from "@/components/ui/icon";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100">
+    <main className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100">
       <div className="container mx-auto px-4 py-12">
-        <div className="text-center mb-8">
+        <header className="text-center mb-8">
           <h1 className="text-5xl font-bold text-gray-900 mb-3 whitespace-nowrap">
             Что подарить?
           </h1>
@@ -20,27 +20,35 @@ const Index = () => {
             агрегатор идей для подарков со ссылками на товары
           </p>
 
-          <div className="flex justify-center gap-4">
-            <Link to="/choose-gift">
+          <nav
+            className="flex justify-center gap-4"
+            role="navigation"
+            aria-label="Основная навигация"
+          >
+            <Link to="/choose-gift" aria-describedby="choose-gift-description">
               <Button className="flex items-center gap-2 text-lg px-6 py-3">
-                <Icon name="Gift" size={20} />
+                <Icon name="Gift" size={20} aria-hidden="true" />
                 Выбрать подарок
               </Button>
             </Link>
-          </div>
-        </div>
+            <span id="choose-gift-description" className="sr-only">
+              Перейти к выбору подарка по категориям
+            </span>
+          </nav>
+        </header>
 
-        <HandmadeDishware />
+        <section aria-label="Категории подарков" className="space-y-8">
+          <HandmadeDishware />
+          <PaintingCollection />
+          <PhotoPrinter />
+          <OzonBest />
+        </section>
 
-        <PaintingCollection />
-
-        <PhotoPrinter />
-
-        <OzonBest />
-
-        <ExternalLinks />
+        <footer className="mt-12">
+          <ExternalLinks />
+        </footer>
       </div>
-    </div>
+    </main>
   );
 };
 

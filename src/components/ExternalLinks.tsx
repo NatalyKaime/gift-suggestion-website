@@ -47,41 +47,51 @@ const ExternalLinks = () => {
   };
 
   return (
-    <div className="container mx-auto px-4 py-8">
-      <div className="text-center mb-8"></div>
+    <section
+      className="container mx-auto px-4 py-8"
+      aria-labelledby="external-links-heading"
+    >
+      <h2 id="external-links-heading" className="sr-only">
+        Полезные ссылки и контакты
+      </h2>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
         {links.map((link, index) => (
-          <Card
+          <article
             key={index}
             className="hover:shadow-lg transition-shadow duration-300 cursor-pointer group"
           >
-            <CardHeader className="text-center">
-              <div
-                className={`w-16 h-16 ${link.color} rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300`}
-              >
-                <Icon name={link.icon} size={24} className="text-white" />
-              </div>
-              <CardTitle className="text-xl font-semibold">
-                {link.title}
-              </CardTitle>
-              <CardDescription className="text-gray-600">
-                {link.description}
-              </CardDescription>
-            </CardHeader>
-            <CardContent className="text-center">
-              <Button
-                onClick={() => handleLinkClick(link.url)}
-                className="w-full bg-primary hover:bg-primary/90 transition-colors duration-300"
-              >
-                Открыть
-                <Icon name="ExternalLink" size={16} className="ml-2" />
-              </Button>
-            </CardContent>
-          </Card>
+            <div className="bg-white rounded-lg p-6 h-full flex flex-col">
+              <header className="text-center mb-4">
+                <div
+                  className={`w-16 h-16 ${link.color} rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300`}
+                  aria-hidden="true"
+                >
+                  <Icon name={link.icon} size={24} className="text-white" />
+                </div>
+                <h3 className="text-xl font-semibold">{link.title}</h3>
+              </header>
+              <p className="text-gray-600 mb-6 flex-grow">{link.description}</p>
+              <footer className="text-center mt-auto">
+                <Button
+                  onClick={() => handleLinkClick(link.url)}
+                  className="w-full bg-primary hover:bg-primary/90 transition-colors duration-300"
+                  aria-label={`Открыть ${link.title}`}
+                >
+                  Открыть
+                  <Icon
+                    name="ExternalLink"
+                    size={16}
+                    className="ml-2"
+                    aria-hidden="true"
+                  />
+                </Button>
+              </footer>
+            </div>
+          </article>
         ))}
       </div>
-    </div>
+    </section>
   );
 };
 
