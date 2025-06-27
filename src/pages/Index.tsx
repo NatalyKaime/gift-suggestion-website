@@ -6,6 +6,7 @@ import HandmadeDishware from "@/components/HandmadeDishware";
 import PaintingCollection from "@/components/PaintingCollection";
 import OzonBest from "@/components/OzonBest";
 import PhotoPrinter from "@/components/PhotoPrinter";
+import WashingVacuum from "@/components/WashingVacuum";
 import Icon from "@/components/ui/icon";
 
 const Index = () => {
@@ -41,6 +42,7 @@ const Index = () => {
           <HandmadeDishware />
           <PaintingCollection />
           <PhotoPrinter />
+          <WashingVacuum />
           <OzonBest />
         </section>
 
