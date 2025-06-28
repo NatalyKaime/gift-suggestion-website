@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import ExternalLinks from "@/components/ExternalLinks";
 
+import JuniperBeads from "@/components/JuniperBeads";
 import HandmadeDishware from "@/components/HandmadeDishware";
 import PaintingCollection from "@/components/PaintingCollection";
 import OzonBest from "@/components/OzonBest";
@@ -39,6 +40,7 @@ const Index = () => {
         </header>
 
         <section aria-label="Категории подарков" className="space-y-8">
+          <JuniperBeads />
           <HandmadeDishware />
           <PaintingCollection />
           <PhotoPrinter />
