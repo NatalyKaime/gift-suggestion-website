@@ -1,3 +1,4 @@
+import Icon from "@/components/ui/icon";
 import { ExternalLink } from "lucide-react";
 
 const JuniperBeads = () => {
@@ -19,10 +20,20 @@ const JuniperBeads = () => {
       </div>
 
       <div className="p-6">
-        <header className="mb-4">
-          <h2 className="text-2xl font-bold text-gray-900 mb-2">
-            можжевеловые бусы
-          </h2>
+        <header className="mb-6">
+          <div className="flex items-center gap-4 mb-4">
+            <div className="w-12 h-12 rounded-full bg-gradient-to-br from-emerald-400 to-teal-600 flex items-center justify-center shadow-lg">
+              <Icon name="TreePine" size={24} className="text-white" />
+            </div>
+            <div>
+              <h2 className="text-2xl font-bold text-gray-900">
+                можжевеловые бусы
+              </h2>
+              <p className="text-gray-600 text-sm">
+                натуральные украшения из можжевельника
+              </p>
+            </div>
+          </div>
         </header>
 
         <footer className="flex justify-between items-center">
