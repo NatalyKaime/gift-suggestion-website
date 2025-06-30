@@ -3,7 +3,7 @@ import Icon from "@/components/ui/icon";
 const PaintingCollection = () => {
   return (
     <article className="max-w-lg mx-auto mb-8">
-      <div className="bg-white rounded-xl shadow-lg border border-gray-200 overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-[1.02] h-96 flex flex-col">
+      <div className="bg-white rounded-xl shadow-lg border border-gray-200 overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-[1.02] h-[480px] flex flex-col">
         <div className="relative flex-shrink-0">
           <img
             src="https://cdn.poehali.dev/files/04e9fdca-a737-4553-ad1d-1e05afe8270d.jpg"

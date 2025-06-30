@@ -4,7 +4,7 @@ import Icon from "@/components/ui/icon";
 const PhotoPrinter = () => {
   return (
     <article className="max-w-lg mx-auto mb-8">
-      <div className="bg-white rounded-xl shadow-lg border border-gray-200 overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-[1.02] h-96 flex flex-col">
+      <div className="bg-white rounded-xl shadow-lg border border-gray-200 overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-[1.02] h-[480px] flex flex-col">
         <div className="relative flex-shrink-0">
           <img
             src="https://cdn.poehali.dev/files/cef45a80-b4d4-4a5c-934e-c04159e39e74.jpg"

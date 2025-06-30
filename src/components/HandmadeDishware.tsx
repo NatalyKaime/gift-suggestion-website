@@ -3,7 +3,7 @@ import Icon from "@/components/ui/icon";
 const HandmadeDishware = () => {
   return (
     <article className="max-w-lg mx-auto mb-8">
-      <div className="bg-white rounded-xl shadow-lg border border-gray-200 overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-[1.02] h-96 flex flex-col">
+      <div className="bg-white rounded-xl shadow-lg border border-gray-200 overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-[1.02] h-[480px] flex flex-col">
         <div className="relative flex-shrink-0">
           <img
             src="https://cdn.poehali.dev/files/5b1d15de-6695-4cd9-b6eb-44b0c6cd7c64.jpg"
