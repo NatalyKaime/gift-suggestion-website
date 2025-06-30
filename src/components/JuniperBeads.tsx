@@ -3,12 +3,12 @@ import { ExternalLink } from "lucide-react";
 
 const JuniperBeads = () => {
   return (
-    <article className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-      <div className="relative">
+    <article className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-1 h-96 flex flex-col">
+      <div className="relative flex-shrink-0">
         <img
           src="https://cdn.poehali.dev/files/3d3f5031-e3ce-4381-bede-6afdcd70f7ae.jpg"
           alt="Можжевеловые бусы ручной работы с деревянными и вязаными элементами"
-          className="w-full h-64 object-cover"
+          className="w-full h-48 object-cover"
           loading="lazy"
         />
         <span
@@ -19,7 +19,7 @@ const JuniperBeads = () => {
         </span>
       </div>
 
-      <div className="p-6">
+      <div className="p-6 flex-1 flex flex-col justify-between">
         <header className="mb-6">
           <div className="flex items-center gap-4 mb-4">
             <div className="w-12 h-12 rounded-full bg-gradient-to-br from-emerald-400 to-teal-600 flex items-center justify-center shadow-lg">

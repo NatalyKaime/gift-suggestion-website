@@ -3,22 +3,22 @@ import Icon from "@/components/ui/icon";
 const PaintingCollection = () => {
   return (
     <article className="max-w-lg mx-auto mb-8">
-      <div className="bg-white rounded-xl shadow-lg border border-gray-200 overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-[1.02]">
-        <div className="relative">
+      <div className="bg-white rounded-xl shadow-lg border border-gray-200 overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-[1.02] h-96 flex flex-col">
+        <div className="relative flex-shrink-0">
           <img
             src="https://cdn.poehali.dev/files/04e9fdca-a737-4553-ad1d-1e05afe8270d.jpg"
             alt="Картина 'Панельные окошки' с силуэтами людей - современное искусство для интерьера"
-            className="w-full h-64 object-cover"
+            className="w-full h-48 object-cover"
             loading="lazy"
             width="400"
-            height="256"
+            height="192"
           />
           <div className="absolute top-3 left-3 bg-purple-100 text-purple-700 text-xs px-3 py-1 rounded-full font-medium">
             дорогие подарки
           </div>
         </div>
 
-        <div className="p-6">
+        <div className="p-6 flex-1 flex flex-col justify-between">
           <header className="flex items-center gap-3 mb-4">
             <div
               className="w-12 h-12 bg-gradient-to-br from-purple-400 to-indigo-500 rounded-full flex items-center justify-center"

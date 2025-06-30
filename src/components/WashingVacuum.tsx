@@ -3,9 +3,9 @@ import Icon from "@/components/ui/icon";
 const WashingVacuum = () => {
   return (
     <article className="max-w-lg mx-auto mb-8">
-      <div className="bg-white rounded-xl shadow-lg border border-gray-200 overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-[1.02]">
-        <div className="relative">
-          <div className="w-full h-64 bg-gray-100">
+      <div className="bg-white rounded-xl shadow-lg border border-gray-200 overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-[1.02] h-96 flex flex-col">
+        <div className="relative flex-shrink-0">
+          <div className="w-full h-48 bg-gray-100">
             <iframe
               src="https://www.tiktok.com/embed/v2/7446948436513672480"
               width="100%"
@@ -22,7 +22,7 @@ const WashingVacuum = () => {
           </div>
         </div>
 
-        <div className="p-6">
+        <div className="p-6 flex-1 flex flex-col justify-between">
           <header className="flex items-center gap-3 mb-4">
             <div
               className="w-12 h-12 bg-gradient-to-br from-blue-400 to-cyan-500 rounded-full flex items-center justify-center"
