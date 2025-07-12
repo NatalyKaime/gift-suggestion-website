@@ -35,58 +35,84 @@ const ChooseGift = () => {
   ];
 
   const giftCategories = {
-    gender: [
+    home: [
       {
-        id: "for-him",
-        title: "Для него",
-        icon: "User",
-        gifts: ["Часы", "Гаджеты", "Книги", "Спорттовары"],
+        id: "kitchen",
+        title: "Кухня",
+        icon: "ChefHat",
+        gifts: ["Блендер", "Кофемашина", "Набор посуды", "Термос"],
       },
       {
-        id: "for-her",
-        title: "Для неё",
-        icon: "Heart",
-        gifts: ["Украшения", "Косметика", "Цветы", "Аксессуары"],
-      },
-    ],
-    age: [
-      {
-        id: "kids",
-        title: "Детям",
-        icon: "Baby",
-        gifts: ["Игрушки", "Конструкторы", "Книги", "Творчество"],
+        id: "decor",
+        title: "Декор",
+        icon: "Home",
+        gifts: ["Картины", "Свечи", "Вазы", "Подушки"],
       },
       {
-        id: "teens",
-        title: "Подросткам",
-        icon: "Gamepad2",
-        gifts: ["Гаджеты", "Игры", "Одежда", "Музыка"],
-      },
-      {
-        id: "adults",
-        title: "Взрослым",
-        icon: "Users",
-        gifts: ["Техника", "Путешествия", "Хобби", "Опыт"],
+        id: "furniture",
+        title: "Мебель",
+        icon: "Sofa",
+        gifts: ["Кресло", "Столик", "Полки", "Органайзеры"],
       },
     ],
-    interests: [
+    books: [
       {
-        id: "tech",
-        title: "Технологии",
+        id: "fiction",
+        title: "Художественная",
+        icon: "BookOpen",
+        gifts: ["Романы", "Фантастика", "Детективы", "Классика"],
+      },
+      {
+        id: "non-fiction",
+        title: "Нехудожественная",
+        icon: "GraduationCap",
+        gifts: ["Биографии", "Психология", "Бизнес", "История"],
+      },
+      {
+        id: "hobby",
+        title: "Хобби",
+        icon: "PaintBrush",
+        gifts: ["Кулинария", "Рукоделие", "Садоводство", "Фотография"],
+      },
+    ],
+    clothing: [
+      {
+        id: "clothes",
+        title: "Одежда",
+        icon: "Shirt",
+        gifts: ["Свитеры", "Платья", "Джинсы", "Пижамы"],
+      },
+      {
+        id: "accessories",
+        title: "Аксессуары",
+        icon: "Watch",
+        gifts: ["Часы", "Сумки", "Украшения", "Шарфы"],
+      },
+      {
+        id: "shoes",
+        title: "Обувь",
+        icon: "Footprints",
+        gifts: ["Кроссовки", "Ботинки", "Тапочки", "Сандалии"],
+      },
+    ],
+    tech: [
+      {
+        id: "gadgets",
+        title: "Гаджеты",
         icon: "Smartphone",
-        gifts: ["Смартфоны", "Ноутбуки", "Гаджеты", "Аксессуары"],
+        gifts: ["Смартфон", "Планшет", "Наушники", "Умные часы"],
       },
       {
-        id: "sport",
-        title: "Спорт",
-        icon: "Dumbbell",
-        gifts: ["Тренажёры", "Одежда", "Оборудование", "Питание"],
+        id: "computers",
+        title: "Компьютеры",
+        icon: "Laptop",
+        gifts: ["Ноутбук", "Клавиатура", "Мышь", "Монитор"],
       },
       {
-        id: "art",
-        title: "Творчество",
-        icon: "Palette",
-        gifts: ["Материалы", "Инструменты", "Курсы", "Книги"],
+        id: "smart-home",
+        title: "Умный дом",
+        icon: "Wifi",
+        gifts: ["Колонки", "Камеры", "Датчики", "Освещение"],
       },
     ],
   };
@@ -201,15 +227,83 @@ const ChooseGift = () => {
           </CardContent>
         </Card>
 
-        <Tabs defaultValue="age" className="w-full">
-          <TabsList className="grid w-full grid-cols-2 mb-8">
-            <TabsTrigger value="age">По возрасту</TabsTrigger>
-            <TabsTrigger value="interests">По интересам</TabsTrigger>
+        <Tabs defaultValue="home" className="w-full">
+          <TabsList className="grid w-full grid-cols-4 mb-8">
+            <TabsTrigger value="home">Для дома</TabsTrigger>
+            <TabsTrigger value="books">Книги</TabsTrigger>
+            <TabsTrigger value="clothing">Одежда и аксессуары</TabsTrigger>
+            <TabsTrigger value="tech">Техника</TabsTrigger>
           </TabsList>
 
-          <TabsContent value="age">
+          <TabsContent value="home">
             <div className="grid md:grid-cols-3 gap-6">
-              {giftCategories.age.map((category) => (
+              {giftCategories.home.map((category) => (
+                <Card
+                  key={category.id}
+                  className="hover:shadow-lg transition-shadow cursor-pointer"
+                  onClick={() => setSelectedCategory(category.id)}
+                >
+                  <CardHeader className="text-center">
+                    <Icon
+                      name={category.icon as any}
+                      size={48}
+                      className="mx-auto mb-4 text-green-600"
+                    />
+                    <CardTitle className="text-xl">{category.title}</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <div className="space-y-2">
+                      {category.gifts.map((gift, index) => (
+                        <div
+                          key={index}
+                          className="bg-green-100 rounded-lg p-2 text-center text-sm"
+                        >
+                          {gift}
+                        </div>
+                      ))}
+                    </div>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </TabsContent>
+
+          <TabsContent value="books">
+            <div className="grid md:grid-cols-3 gap-6">
+              {giftCategories.books.map((category) => (
+                <Card
+                  key={category.id}
+                  className="hover:shadow-lg transition-shadow cursor-pointer"
+                  onClick={() => setSelectedCategory(category.id)}
+                >
+                  <CardHeader className="text-center">
+                    <Icon
+                      name={category.icon as any}
+                      size={48}
+                      className="mx-auto mb-4 text-amber-600"
+                    />
+                    <CardTitle className="text-xl">{category.title}</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <div className="space-y-2">
+                      {category.gifts.map((gift, index) => (
+                        <div
+                          key={index}
+                          className="bg-amber-100 rounded-lg p-2 text-center text-sm"
+                        >
+                          {gift}
+                        </div>
+                      ))}
+                    </div>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </TabsContent>
+
+          <TabsContent value="clothing">
+            <div className="grid md:grid-cols-3 gap-6">
+              {giftCategories.clothing.map((category) => (
                 <Card
                   key={category.id}
                   className="hover:shadow-lg transition-shadow cursor-pointer"
@@ -240,9 +334,9 @@ const ChooseGift = () => {
             </div>
           </TabsContent>
 
-          <TabsContent value="interests">
+          <TabsContent value="tech">
             <div className="grid md:grid-cols-3 gap-6">
-              {giftCategories.interests.map((category) => (
+              {giftCategories.tech.map((category) => (
                 <Card
                   key={category.id}
                   className="hover:shadow-lg transition-shadow cursor-pointer"
